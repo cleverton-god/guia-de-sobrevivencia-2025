@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reportar | Refúgio 2145</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body { background: #000 !important; color: #fff !important; font-family: 'Segoe UI', sans-serif; }
+    .form-control, .form-select { background-color: #111 !important; color: #fff !important; border: 1px solid #555 !important; }
+    .form-control:focus, .form-select:focus { box-shadow: 0 0 8px rgba(220,53,69,0.5); border-color: #dc3545 !important; }
+    .preview-img { max-height: 200px; object-fit: cover; }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-black border-bottom border-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger d-flex align-items-center" href="index.html">
+        <i class="bi bi-shield-fill-check fs-4 me-2"></i> REFÚGIO 2145
+      </a>
+      <button class="navbar-toggler border-danger text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-uppercase fw-medium">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="criaturas.html">Vácua</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="taticas.html">Táticas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold active" href="#">REPORTAR</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h2 class="text-center text-danger fw-bold mb-5 text-uppercase">TRANSMITIR AVISTAMENTO</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <form class="bg-black p-4 rounded border border-danger shadow-sm" id="reportForm">
+          
+          <!-- NOME -->
+          <div class="mb-3">
+            <label class="form-label text-white">Nome do Comunicador</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <!-- LOCAL -->
+          <div class="mb-3">
+            <label class="form-label text-white">Local (coordenadas ou referência)</label>
+            <input type="text" class="form-control" placeholder="Ex: 23.1S / 46.2W - Estação Luz" required>
+          </div>
+
+          <!-- TIPO DE VÁCUA -->
+          <div class="mb-3">
+            <label class="form-label text-white">Tipo de Vácua</label>
+            <select class="form-select" required>
+              <option value="">Selecione...</option>
+              <option>Aranha Sombria</option>
+              <option>Lobo Cinzento</option>
+              <option>Rastejante Ácido</option>
+              <option>Voador Noturno</option>
+              <option>Colosso de Ferro</option>
+              <option>Infectado Urbano</option>
+              <option>Sombra de Névoa</option>
+              <option>Devorador de Luz</option>
+              <option>Rei do Esgoto</option>
+            </select>
+          </div>
+
+          <!-- DATA/HORA -->
+          <div class="mb-3">
+            <label class="form-label text-white">Data e Hora do Avistamento</label>
+            <input type="datetime-local" class="form-control" required>
+          </div>
+
+          <!-- ANEXO DE FOTO -->
+          <div class="mb-3">
+            <label class="form-label text-white">
+              <i class="bi bi-camera-fill"></i> Anexar Foto (opcional)
+            </label>
+            <input type="file" class="form-control" accept="image/*" id="photoInput">
+            <div class="mt-2 text-center">
+              <img id="photoPreview" class="preview-img rounded d-none" alt="Pré-visualização">
+            </div>
+          </div>
+
+          <!-- DESCRIÇÃO -->
+          <div class="mb-3">
+            <label class="form-label text-white">Descrição do Avistamento</label>
+            <textarea class="form-control" rows="4" placeholder="Detalhes visuais, comportamento, número de indivíduos..." required></textarea>
+          </div>
+
+          <!-- ENVIAR -->
+          <button type="submit" class="btn btn-danger w-100 fw-bold text-uppercase">
+            <i class="bi bi-send-fill"></i> ENVIAR RELATO
+          </button>
+
+          <p class="text-danger text-center mt-3 small fw-bold">
+            NUNCA SE APROXIME. REGISTRE E FUJA.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT: PRÉ-VISUALIZAÇÃO DE IMAGEM -->
+  <script>
+    const photoInput = document.getElementById('photoInput');
+    const photoPreview = document.getElementById('photoPreview');
+
+    photoInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          photoPreview.src = e.target.result;
+          photoPreview.classList.remove('d-none');
+        };
+        reader.readAsDataURL(file);
+      } else {
+        photoPreview.classList.add('d-none');
+      }
+    });
+
+    // Simulação de envio
+    document.getElementById('reportForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('RELATO ENVIADO COM SUCESSO AO REFÚGIO 2145.\n\nFoto anexada: ' + 
+            (photoInput.files[0] ? photoInput.files[0].name : 'Nenhuma') +
+            '\n\nSinal recebido. Mantenha-se vivo.');
+      this.reset();
+      photoPreview.classList.add('d-none');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

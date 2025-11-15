@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vácua | Refúgio 2145</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body { background: #000 !important; color: #fff !important; font-family: 'Segoe UI', sans-serif; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3); }
+    .modal-header { border-bottom: 1px solid #555; }
+    .modal-footer { border-top: 1px solid #555; }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-black border-bottom border-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger d-flex align-items-center" href="index.html">
+        <i class="bi bi-shield-fill-check fs-4 me-2"></i> REFÚGIO 2145
+      </a>
+      <button class="navbar-toggler border-danger text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-uppercase fw-medium">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-danger active" href="#">Vácua</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="taticas.html">Táticas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="relatar.html">REPORTAR</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container py-5">
+  <h2 class="text-center text-danger fw-bold mb-3 text-uppercase">ARQUIVO VÁCUA</h2>
+  <p class="text-center text-white small mb-5 fw-bold">9 ESPÉCIES CONFIRMADAS | PRIORIDADE DE EXTERMÍNIO</p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!-- VÁCUA 01 - FOGO -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-danger element-fire" data-bs-toggle="modal" data-bs-target="#vacua01">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=ARANHA+SOMBRIA" class="card-img-top" alt="Aranha Sombria">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Aranha Sombria</h5>
+          <p class="card-text small text-white flex-grow-1">Teias radioativas. Silêncio absoluto.</p>
+          <div class="mt-auto">
+            <span class="badge bg-danger text-black">Fogo</span>
+            <button class="btn btn-sm btn-outline-danger mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 02 - LUZ FORTE -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-warning element-light" data-bs-toggle="modal" data-bs-target="#vacua02">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=LOBO+CINZENTO" class="card-img-top" alt="Lobo Cinzento">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Lobo Cinzento</h5>
+          <p class="card-text small text-white flex-grow-1">Matilha noturna. Visão térmica.</p>
+          <div class="mt-auto">
+            <span class="badge bg-warning text-dark">Luz Forte</span>
+            <button class="btn btn-sm btn-outline-warning mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 03 - ÁGUA -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-primary element-water" data-bs-toggle="modal" data-bs-target="#vacua03">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=RASTEJANTE+ÁCIDO" class="card-img-top" alt="Rastejante Ácido">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Rastejante Ácido</h5>
+          <p class="card-text small text-white flex-grow-1">Corrosão instantânea. Rápido.</p>
+          <div class="mt-auto">
+            <span class="badge bg-primary text-white">Água</span>
+            <button class="btn btn-sm btn-outline-primary mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 04 - REDE -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-success element-net" data-bs-toggle="modal" data-bs-target="#vacua04">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=VOADOR+NOTURNO" class="card-img-top" alt="Voador Noturno">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Voador Noturno</h5>
+          <p class="card-text small text-white flex-grow-1">Asas silenciosas. Ataque aéreo.</p>
+          <div class="mt-auto">
+            <span class="badge bg-success text-white">Rede</span>
+            <button class="btn btn-sm btn-outline-success mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 05 - EXPLOSIVOS (LARANJA) -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 element-explosive" data-bs-toggle="modal" data-bs-target="#vacua05" style="border: 2px solid #fd7e14;">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=COLOSSO+DE+FERRO" class="card-img-top" alt="Colosso de Ferro">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Colosso de Ferro</h5>
+          <p class="card-text small text-white flex-grow-1">Blindagem pesada. Lento.</p>
+          <div class="mt-auto">
+            <span class="badge text-white" style="background-color: #fd7e14;">Explosivos</span>
+            <button class="btn btn-sm mt-2 w-100" style="border-color: #fd7e14; color: #fd7e14;">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 06 - FOGO -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-danger element-fire" data-bs-toggle="modal" data-bs-target="#vacua06">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=INFECTADO+URBANO" class="card-img-top" alt="Infectado Urbano">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Infectado Urbano</h5>
+          <p class="card-text small text-white flex-grow-1">Humano mutado. Contagioso.</p>
+          <div class="mt-auto">
+            <span class="badge bg-danger text-black">Fogo</span>
+            <button class="btn btn-sm btn-outline-danger mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 07 - VENTO -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-info element-wind" data-bs-toggle="modal" data-bs-target="#vacua07">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=SOMBRA+DE+NÉVOA" class="card-img-top" alt="Sombra de Névoa">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Sombra de Névoa</h5>
+          <p class="card-text small text-white flex-grow-1">Invisível em fumaça.</p>
+          <div class="mt-auto">
+            <span class="badge bg-info text-dark">Vento</span>
+            <button class="btn btn-sm btn-outline-info mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 08 - SINALIZADOR (ROXO) -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 element-flare" data-bs-toggle="modal" data-bs-target="#vacua08" style="border: 2px solid #6f42c1;">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=DEVORADOR+DE+LUZ" class="card-img-top" alt="Devorador de Luz">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Devorador de Luz</h5>
+          <p class="card-text small text-white flex-grow-1">Absorve luz. Cega.</p>
+          <div class="mt-auto">
+            <span class="badge text-white" style="background-color: #6f42c1;">Sinalizador</span>
+            <button class="btn btn-sm mt-2 w-100" style="border-color: #6f42c1; color: #6f42c1;">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VÁCUA 09 - ANTÍDOTO -->
+    <div class="col">
+      <div class="card bg-black text-white h-100 border-success element-antidote" data-bs-toggle="modal" data-bs-target="#vacua09">
+        <img src="https://via.placeholder.com/300x200/222/fff?text=REI+DO+ESGOTO" class="card-img-top" alt="Rei do Esgoto">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-white fw-bold">Rei do Esgoto</h5>
+          <p class="card-text small text-white flex-grow-1">Enorme. Veneno.</p>
+          <div class="mt-auto">
+            <span class="badge bg-success text-white">Antídoto</span>
+            <button class="btn btn-sm btn-outline-success mt-2 w-100">VER MAIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- modal -->
+  
+  <!-- VÁCUA 01 - FOGO -->
+  <div class="modal fade" id="vacua01" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-danger">
+        <div class="modal-header border-danger">
+          <h5 class="modal-title text-danger fw-bold">VÁCUA-01: Aranha Sombria</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=ARANHA+SOMBRIA" class="img-fluid rounded border-danger" alt="Aranha Sombria">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-danger">Classe:</strong> Aracnídeo Mutante</p>
+              <p><strong class="text-danger">Tamanho:</strong> 1,8m a 2,2m (corpo)</p>
+              <p><strong class="text-danger">Habitat:</strong> Metrôs abandonados, túneis, esgotos</p>
+              <p><strong class="text-danger">Comportamento:</strong> Caça em silêncio. Teias emitem radiação fraca.</p>
+              <p><strong class="text-danger">Ponto Fraco:</strong> <span class="badge bg-danger text-black">Fogo</span></p>
+              <p><strong class="text-danger">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-danger">Use tochas ou coquetel molotov</li>
+                <li class="list-group-item bg-black text-white border-danger">Evite túneis escuros</li>
+                <li class="list-group-item bg-black text-white border-danger">Queime teias antes de avançar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-danger">
+          <button class="btn btn-outline-danger" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 02 - LUZ FORTE -->
+  <div class="modal fade" id="vacua02" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-warning">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title text-warning fw-bold">VÁCUA-02: Lobo Cinzento</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=LOBO+CINZENTO" class="img-fluid rounded border-warning" alt="Lobo Cinzento">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-warning">Classe:</strong> Canídeo Mutante</p>
+              <p><strong class="text-warning">Tamanho:</strong> 1,5m (ombro)</p>
+              <p><strong class="text-warning">Habitat:</strong> Ruas, parques, matas urbanas</p>
+              <p><strong class="text-warning">Comportamento:</strong> Caça em matilha de 3-7. Visão térmica.</p>
+              <p><strong class="text-warning">Ponto Fraco:</strong> <span class="badge bg-warning text-dark">Luz Forte</span></p>
+              <p><strong class="text-warning">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-warning">Use lanterna de alta potência</li>
+                <li class="list-group-item bg-black text-white border-warning">Evite confronto direto</li>
+                <li class="list-group-item bg-black text-white border-warning">Dispare sinalizador no chão</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-warning">
+          <button class="btn btn-outline-warning" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 03 - ÁGUA -->
+  <div class="modal fade" id="vacua03" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-primary">
+        <div class="modal-header border-primary">
+          <h5 class="modal-title text-primary fw-bold">VÁCUA-03: Rastejante Ácido</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=RASTEJANTE+ÁCIDO" class="img-fluid rounded border-primary" alt="Rastejante Ácido">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-primary">Classe:</strong> Anfíbio Mutante</p>
+              <p><strong class="text-primary">Tamanho:</strong> 0,8m a 1,2m</p>
+              <p><strong class="text-primary">Habitat:</strong> Lagos contaminados, rios</p>
+              <p><strong class="text-primary">Comportamento:</strong> Rasteja rapidamente. Cospe ácido corrosivo.</p>
+              <p><strong class="text-primary">Ponto Fraco:</strong> <span class="badge bg-primary text-white">Água</span></p>
+              <p><strong class="text-primary">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-primary">Use garrafas de água limpa</li>
+                <li class="list-group-item bg-black text-white border-primary">Evite contato com saliva</li>
+                <li class="list-group-item bg-black text-white border-primary">Fuja para terreno seco</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-primary">
+          <button class="btn btn-outline-primary" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 04 - REDE -->
+  <div class="modal fade" id="vacua04" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-success">
+        <div class="modal-header border-success">
+          <h5 class="modal-title text-success fw-bold">VÁCUA-04: Voador Noturno</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=VOADOR+NOTURNO" class="img-fluid rounded border-success" alt="Voador Noturno">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-success">Classe:</strong> Ave Mutante</p>
+              <p><strong class="text-success">Tamanho:</strong> 2,0m (envergadura)</p>
+              <p><strong class="text-success">Habitat:</strong> Prédios altos, torres</p>
+              <p><strong class="text-success">Comportamento:</strong> Voa silenciosamente. Ataque em mergulho.</p>
+              <p><strong class="text-success">Ponto Fraco:</strong> <span class="badge bg-success text-white">Rede</span></p>
+              <p><strong class="text-success">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-success">Use redes de pesca</li>
+                <li class="list-group-item bg-black text-white border-success">Fique em locais com teto</li>
+                <li class="list-group-item bg-black text-white border-success">Dispare para o alto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-success">
+          <button class="btn btn-outline-success" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 05 - EXPLOSIVOS (LARANJA) -->
+  <div class="modal fade" id="vacua05" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white" style="border: 2px solid #fd7e14;">
+        <div class="modal-header" style="border-bottom: 1px solid #fd7e14;">
+          <h5 class="modal-title" style="color: #fd7e14; font-weight: bold;">VÁCUA-05: Colosso de Ferro</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=COLOSSO+DE+FERRO" class="img-fluid rounded" style="border: 2px solid #fd7e14;" alt="Colosso de Ferro">
+            </div>
+            <div class="col-md-7">
+              <p><strong style="color: #fd7e14;">Classe:</strong> Constructo Mutante</p>
+              <p><strong style="color: #fd7e14;">Tamanho:</strong> 3,5m a 4,0m</p>
+              <p><strong style="color: #fd7e14;">Habitat:</strong> Fábricas, zonas industriais</p>
+              <p><strong style="color: #fd7e14;">Comportamento:</strong> Blindagem pesada. Lento.</p>
+              <p><strong style="color: #fd7e14;">Ponto Fraco:</strong> <span class="badge" style="background-color: #fd7e14; color: white;">Explosivos</span></p>
+              <p><strong style="color: #fd7e14;">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white" style="border-color: #fd7e14;">Use granadas caseiras</li>
+                <li class="list-group-item bg-black text-white" style="border-color: #fd7e14;">Ataque por trás</li>
+                <li class="list-group-item bg-black text-white" style="border-color: #fd7e14;">Evite combate direto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid #fd7e14;">
+          <button class="btn" style="border-color: #fd7e14; color: #fd7e14;" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 06 - FOGO -->
+  <div class="modal fade" id="vacua06" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-danger">
+        <div class="modal-header border-danger">
+          <h5 class="modal-title text-danger fw-bold">VÁCUA-06: Infectado Urbano</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=INFECTADO+URBANO" class="img-fluid rounded border-danger" alt="Infectado Urbano">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-danger">Classe:</strong> Humano Mutado</p>
+              <p><strong class="text-danger">Tamanho:</strong> 1,7m a 1,9m</p>
+              <p><strong class="text-danger">Habitat:</strong> Ruas, prédios residenciais</p>
+              <p><strong class="text-danger">Comportamento:</strong> Contagioso. Hordas.</p>
+              <p><strong class="text-danger">Ponto Fraco:</strong> <span class="badge bg-danger text-black">Fogo</span></p>
+              <p><strong class="text-danger">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-danger">Use fogo para desinfecção</li>
+                <li class="list-group-item bg-black text-white border-danger">Máscara obrigatória</li>
+                <li class="list-group-item bg-black text-white border-danger">Evite mordidas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-danger">
+          <button class="btn btn-outline-danger" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 07 - VENTO (CIANO) -->
+  <div class="modal fade" id="vacua07" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-info">
+        <div class="modal-header border-info">
+          <h5 class="modal-title text-info fw-bold">VÁCUA-07: Sombra de Névoa</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=SOMBRA+DE+NÉVOA" class="img-fluid rounded border-info" alt="Sombra de Névoa">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-info">Classe:</strong> Etéreo Mutante</p>
+              <p><strong class="text-info">Tamanho:</strong> Variável (2m a 4m)</p>
+              <p><strong class="text-info">Habitat:</strong> Zonas com névoa tóxica</p>
+              <p><strong class="text-info">Comportamento:</strong> Invisível em fumaça.</p>
+              <p><strong class="text-info">Ponto Fraco:</strong> <span class="badge bg-info text-dark">Vento</span></p>
+              <p><strong class="text-info">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-info">Use ventilador ou explosão</li>
+                <li class="list-group-item bg-black text-white border-info">Máscara com filtro</li>
+                <li class="list-group-item bg-black text-white border-info">Mova-se contra o vento</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-info">
+          <button class="btn btn-outline-info" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 08 - SINALIZADOR (ROXO) -->
+  <div class="modal fade" id="vacua08" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white" style="border: 2px solid #6f42c1;">
+        <div class="modal-header" style="border-bottom: 1px solid #6f42c1;">
+          <h5 class="modal-title" style="color: #6f42c1; font-weight: bold;">VÁCUA-08: Devorador de Luz</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=DEVORADOR+DE+LUZ" class="img-fluid rounded" style="border: 2px solid #6f42c1;" alt="Devorador de Luz">
+            </div>
+            <div class="col-md-7">
+              <p><strong style="color: #6f42c1;">Classe:</strong> Parasita Luminoso</p>
+              <p><strong style="color: #6f42c1;">Tamanho:</strong> 1,0m a 1,5m</p>
+              <p><strong style="color: #6f42c1;">Habitat:</strong> Zonas escuras, subsolo</p>
+              <p><strong style="color: #6f42c1;">Comportamento:</strong> Absorve luz. Cega.</p>
+              <p><strong style="color: #6f42c1;">Ponto Fraco:</strong> <span class="badge" style="background-color: #6f42c1; color: white;">Sinalizador</span></p>
+              <p><strong style="color: #6f42c1;">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white" style="border-color: #6f42c1;">Use sinalizador vermelho</li>
+                <li class="list-group-item bg-black text-white" style="border-color: #6f42c1;">Feche os olhos antes</li>
+                <li class="list-group-item bg-black text-white" style="border-color: #6f42c1;">Ataque enquanto cego</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid #6f42c1;">
+          <button class="btn" style="border-color: #6f42c1; color: #6f42c1;" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VÁCUA 09 - ANTÍDOTO (VERDE ESCURO) -->
+  <div class="modal fade" id="vacua09" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black text-white border-success">
+        <div class="modal-header border-success">
+          <h5 class="modal-title text-success fw-bold">VÁCUA-09: Rei do Esgoto</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5">
+              <img src="https://via.placeholder.com/600x400/222/fff?text=REI+DO+ESGOTO" class="img-fluid rounded border-success" alt="Rei do Esgoto">
+            </div>
+            <div class="col-md-7">
+              <p><strong class="text-success">Classe:</strong> Réptil Gigante</p>
+              <p><strong class="text-success">Tamanho:</strong> 5,0m a 6,0m</p>
+              <p><strong class="text-success">Habitat:</strong> Esgotos principais</p>
+              <p><strong class="text-success">Comportamento:</strong> Territorial. Veneno.</p>
+              <p><strong class="text-success">Ponto Fraco:</strong> <span class="badge bg-success text-white">Antídoto</span></p>
+              <p><strong class="text-success">Tática Recomendada:</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-black text-white border-success">Carregue antídoto (planta azul)</li>
+                <li class="list-group-item bg-black text-white border-success">Evite mordida</li>
+                <li class="list-group-item bg-black text-white border-success">Use armadilhas com isca</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-success">
+          <button class="btn btn-outline-success" data-bs-dismiss="modal">FECHAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
