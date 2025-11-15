@@ -9,11 +9,12 @@
   <style>
     body { background: #000 !important; color: #fff !important; font-family: 'Segoe UI', sans-serif; }
     .navbar { border-bottom: 2px solid #dc3545 !important; }
-    
+
     /* TABELA */
     .table {
       border: 2px solid #333;
       font-size: 0.95rem;
+      background-color: #111;
     }
     .table thead {
       background: #dc3545 !important;
@@ -38,15 +39,41 @@
     .seguranca-medio:hover { background-color: rgba(253, 126, 20, 0.15) !important; }
     .seguranca-baixo:hover { background-color: rgba(73, 80, 87, 0.15) !important; }
 
-    /* MAPA */
-    .mapa-container img {
-      border: 3px solid #dc3545;
-      box-shadow: 0 0 15px rgba(220, 53, 69, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* MAPA ESTRATÉGICO – 1024x1024 RESPONSIVO */
+    .mapa-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
-    .mapa-container img:hover {
+    .mapa-img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      object-position: center;
+      border: 3px solid #dc3545;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(220, 53, 69, 0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .mapa-img:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 25px rgba(220, 53, 69, 0.6);
+      box-shadow: 0 0 35px rgba(220, 53, 69, 0.7);
+    }
+
+    .mapa-legenda {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    /* MOBILE: AJUSTE DE ALTURA */
+    @media (max-width: 768px) {
+      .mapa-img { height: 350px; }
+      .mapa-container { padding: 0 0.5rem; }
+    }
+    @media (max-width: 576px) {
+      .mapa-img { height: 300px; }
     }
   </style>
 </head>
@@ -77,7 +104,7 @@
     <h2 class="text-center text-danger fw-bold mb-5 text-uppercase">ZONAS SEGURAS</h2>
 
     <!-- TABELA COM CORES POR SEGURANÇA -->
-    <div class="table-responsive">
+    <div class="table-responsive mb-5">
       <table class="table table-dark table-striped table-bordered">
         <thead class="bg-danger text-black">
           <tr>
@@ -134,11 +161,11 @@
     </div>
 
     <!-- MAPA ESTRATÉGICO -->
-    <div class="mt-5 mapa-container text-center w-50 mx-auto">
+    <div class="mapa-container">
       <img src="./assets/imagens/mapa.jpg" 
-           class="img-fluid rounded shadow" 
-           alt="Mapa Estratégico">
-      <p class="mt-3 text-secondary small fw-bold">MAPA ATUALIZADO: 15 NOV 2145</p>
+           class="mapa-img img-fluid" 
+           alt="Mapa Estratégico com 5 Bunkers Marcados">
+      <p class="mapa-legenda fw-bold">MAPA ATUALIZADO: 15 NOV 2145 – 15:49 -03</p>
     </div>
   </div>
 

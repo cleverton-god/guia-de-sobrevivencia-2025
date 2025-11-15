@@ -10,26 +10,43 @@
     body { background: #000 !important; color: #fff !important; font-family: 'Segoe UI', sans-serif; }
     .navbar { border-bottom: 2px solid #dc3545 !important; }
     .section-title { font-weight: bold; text-transform: uppercase; }
-    
+
     /* CORES POR SEÇÃO */
-    .section-abrigo .section-title { color: #28a745 !important; } /* Verde Militar */
+    .section-abrigo .section-title { color: #28a745 !important; }
     .section-abrigo .list-group-item { border-color: #28a745 !important; }
     .section-abrigo img { border: 2px solid #28a745; }
 
-    .section-alimentacao .section-title { color: #fd7e14 !important; } /* Laranja */
+    .section-alimentacao .section-title { color: #fd7e14 !important; }
     .section-alimentacao .list-group-item { border-color: #fd7e14 !important; }
     .section-alimentacao img { border: 2px solid #fd7e14; }
 
-    .section-sinais .section-title { color: #dc3545 !important; } /* Vermelho */
+    .section-sinais .section-title { color: #dc3545 !important; }
     .section-sinais .list-group-item { border-color: #dc3545 !important; }
     .section-sinais img { border: 2px solid #dc3545; }
 
-    .section-socorros .section-title { color: #0d6efd !important; } /* Azul */
+    .section-socorros .section-title { color: #0d6efd !important; }
     .section-socorros .list-group-item { border-color: #0d6efd !important; }
     .section-socorros img { border: 2px solid #0d6efd; }
 
-    .img-fluid { transition: transform 0.3s ease; }
-    .img-fluid:hover { transform: scale(1.02); }
+    /* IMAGENS 1024x1024: RESPONSIVAS E CENTRALIZADAS */
+    .tatica-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tatica-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+    }
+
+    /* MOBILE: IMAGENS MAIS ALTAS */
+    @media (max-width: 768px) {
+      .tatica-img { height: 250px; }
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -59,7 +76,7 @@
     <h2 class="text-center text-danger fw-bold mb-5 text-uppercase">PROTOCOLOS DE CAMPO</h2>
 
     <!-- ABRIGO (VERDE MILITAR) -->
-    <div class="row g-5 mb-5 section-abrigo">
+    <div class="row g-5 mb-5 section-abrigo align-items-center">
       <div class="col-md-6">
         <h4 class="section-title mb-3">ABRIGO TEMPORÁRIO</h4>
         <ol class="list-group list-group-numbered">
@@ -70,12 +87,14 @@
         </ol>
       </div>
       <div class="col-md-6">
-        <img src="https://via.placeholder.com/500x300/222/fff?text=ABRIGO" class="img-fluid rounded shadow-sm" alt="Abrigo">
+        <img src="./assets/imagens/tatica 1.png" 
+             class="tatica-img w-100" 
+             alt="Abrigo Temporário">
       </div>
     </div>
 
     <!-- ALIMENTAÇÃO (LARANJA) -->
-    <div class="row g-5 mb-5 section-alimentacao">
+    <div class="row g-5 mb-5 section-alimentacao align-items-center">
       <div class="col-md-6 order-md-2">
         <h4 class="section-title mb-3">ALIMENTAÇÃO SEGURA</h4>
         <ul class="list-group">
@@ -85,12 +104,14 @@
         </ul>
       </div>
       <div class="col-md-6 order-md-1">
-        <img src="https://via.placeholder.com/500x300/222/fff?text=ALIMENTAÇÃO" class="img-fluid rounded shadow-sm" alt="Alimentação">
+        <img src="./assets/imagens/tatica 2.png" 
+             class="tatica-img w-100" 
+             alt="Alimentação Segura">
       </div>
     </div>
 
     <!-- SINAIS DE SOCORRO (VERMELHO) -->
-    <div class="row g-5 mb-5 section-sinais">
+    <div class="row g-5 mb-5 section-sinais align-items-center">
       <div class="col-md-6">
         <h4 class="section-title mb-3">SINAIS DE SOCORRO</h4>
         <ul class="list-group">
@@ -100,12 +121,14 @@
         </ul>
       </div>
       <div class="col-md-6">
-        <img src="https://via.placeholder.com/500x300/222/fff?text=SINAL" class="img-fluid rounded shadow-sm" alt="Sinal">
+        <img src="./assets/imagens/tatica 3.png" 
+             class="tatica-img w-100" 
+             alt="Sinais de Socorro">
       </div>
     </div>
 
     <!-- PRIMEIROS SOCORROS (AZUL) -->
-    <div class="row g-5 mb-5 section-socorros">
+    <div class="row g-5 mb-5 section-socorros align-items-center">
       <div class="col-md-6 order-md-2">
         <h4 class="section-title mb-3">PRIMEIROS SOCORROS</h4>
         <ul class="list-group">
@@ -115,7 +138,9 @@
         </ul>
       </div>
       <div class="col-md-6 order-md-1">
-        <img src="https://via.placeholder.com/500x300/222/fff?text=SOCORROS" class="img-fluid rounded shadow-sm" alt="Primeiros Socorros">
+        <img src="./assets/imagens/tatica 4.png" 
+             class="tatica-img w-100" 
+             alt="Primeiros Socorros">
       </div>
     </div>
   </div>
